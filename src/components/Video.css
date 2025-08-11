@@ -1,0 +1,91 @@
+.dark {
+    background-color: gray;
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 15em;
+    margin: 0 0.2em;
+    float: left;
+}
+
+.pic img {
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: white
+}
+
+.channel,
+.views {
+    font-size: small;
+    color: #ccc;
+    margin-bottom: 0.2em;
+}
+
+.views span {
+    padding: 0 0.5em;
+}
+
+.edit {
+    position: absolute;
+    right: 4em;
+    background: yellow;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    text-shadow: rgba(0, 0, 0, .3) 1px 1px 1px;
+    text-underline-offset: 1px;
+}
+
+/* CSS */
+.close {
+    position: absolute;
+    right: 0.5em;
+    background: #e62143;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+
+    font-family: Mija, -apple-system, BlinkMacSystemFont, Roboto, "Roboto Slab", "Droid Serif", "Segoe UI", system-ui, Arial, sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 33.4929px;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    text-shadow: rgba(0, 0, 0, .3) 1px 1px 1px;
+    text-underline-offset: 1px;
+    transition: all .2s ease-in-out;
+
+
+
+    width: 30px;
+
+    border: 0;
+}
+
+.close:active,
+.close:focus {
+    border-bottom-style: none;
+    border-color: #dadada;
+    box-shadow: rgba(0, 0, 0, .3) 0 3px 3px inset;
+    outline: 0;
+}
+
+.close:hover {
+    border-bottom-style: none;
+    border-color: #dadada;
+}
