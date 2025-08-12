@@ -1,12 +1,13 @@
 import './Video.css';
 import Playbutton from './Playbutton.jsx'
+import useVideoDispatch from '../hooks/useVideoDispatch.js';
 
-function Video({ title, channel = "Coder Dost", views, time, verified, id, deleteVideo, editVideo }) {
-
+function Video({ title, channel = "Coder Dost", views, time, verified, id, editVideo }) {
+    const dispatch = useVideoDispatch()
     return (
         <>
             <div className='container'>
-                <button className="close" onClick={() => deleteVideo(id)}>X</button>
+                <button className="close" onClick={() => dispatch({ type: 'DELETE', payload: id })}>X</button>
                 <button className="edit" onClick={() => editVideo(id)}>🖊️</button>
 
                 <div className="pic">
@@ -24,8 +25,8 @@ function Video({ title, channel = "Coder Dost", views, time, verified, id, delet
                     message="Play msg">
 
                 </Playbutton>
-                {/* <Playbutton title={title} onClick={() => alert("paaause")} message="Pause message">Pause</Playbutton> */}
-            </div>
+
+            </div >
         </>
     );
 }

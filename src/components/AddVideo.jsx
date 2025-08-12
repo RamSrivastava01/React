@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./AddVideo.css"
-function AddVideo({ addVideo, updateVideo, editableVideo }) {
+import useVideoDispatch from "../hooks/useVideoDispatch";
+
+function AddVideo({ updateVideo, editableVideo }) {
     const initialValue = {
         time: "2 year ago",
         channel: "Coder Dost",
@@ -8,16 +10,17 @@ function AddVideo({ addVideo, updateVideo, editableVideo }) {
         title: '',
         views: ''
     }
+    const dispatch = useVideoDispatch()
     const [isEditable, setIsEditable] = useState(false)
     const [video, setVideo] = useState(initialValue)
     //HANDLING SUBMIT
     function handleSubmit(e) {
         e.preventDefault();
         if (editableVideo) {
-            updateVideo(video)
+            dispatch({ type: "UPDATE", payload: video })
         } else {
 
-            addVideo(video)
+            dispatch({ type: 'ADD', payload: video })
         }
         setVideo(initialValue)
 
